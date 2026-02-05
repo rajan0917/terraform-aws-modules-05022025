@@ -15,3 +15,9 @@ resource "aws_api_gateway_method" "proxy_any" {
   http_method   = "ANY"
   authorization = var.authorization
 }
+resource "aws_apigatewayv2_api" "this" {
+  name = var.name
+  tags = var.tags
+  protocol_type = var.protocol_type
+}
+

@@ -7,7 +7,7 @@ variable "region" {
 
 variable "Environment" {
   type    = string
-  default = "test"
+  default = "dev"
 }
 
 variable "Team" {
@@ -326,3 +326,4 @@ variable "authorization" {
   default = "NONE"
 }
 
+variable "kms_key_alias" {}

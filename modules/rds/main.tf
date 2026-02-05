@@ -23,4 +23,6 @@ resource "aws_db_instance" "this" {
   skip_final_snapshot     = var.skip_final_snapshot
   backup_retention_period = var.backup_retention
   storage_encrypted       = var.storage_encrypted
+  tags = var.tags
 }
+

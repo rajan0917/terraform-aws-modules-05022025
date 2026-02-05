@@ -2,6 +2,8 @@ resource "aws_wafv2_web_acl" "this" {
   name  = var.name
   scope = var.scope
   default_action { 
+#  arn = aws_wafv2_ip_set.blocklist[0].arn
+
 #	allow = "true"
 }
 
@@ -21,7 +23,8 @@ resource "aws_wafv2_web_acl" "this" {
  }
       statement {
         ip_set_reference_statement {
-          arn = aws_wafv2_ip_set.blocklist.arn
+#          arn = aws_wafv2_ip_set.blocklist.arn
+	  arn = aws_wafv2_ip_set.blocklist[0].arn
         }
       }
       visibility_config {

@@ -71,3 +71,5 @@ egress = [
 ]
 scope = "REGIONAL"
 block_ips = ["203.0.113.0/32"]
+kms_key_alias = "alias/my-app-kms"
+
